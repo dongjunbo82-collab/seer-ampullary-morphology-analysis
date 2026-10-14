@@ -1,0 +1,20 @@
+# All data/results stay outside the repository; defense in depth only.
+*.csv
+*.tsv
+*.txt
+*.rds
+*.RData
+*.Rhistory
+*.docx
+*.pdf
+*.png
+*.tif
+*.tiff
+*.zip
+*.log
+.env*
+data/
+outputs/
+results/
+private*/
+__pycache__/

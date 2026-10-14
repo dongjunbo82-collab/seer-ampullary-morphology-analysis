@@ -1,0 +1,22 @@
+{
+  "title": "SEER ampullary morphology: statistical analysis code",
+  "upload_type": "software",
+  "description": "Code-only R statistical analysis of SEER ampullary adenocarcinoma morphology coding and clinical selection. No manuscript, patient-level data, result datasets, personal contacts, or credentials are included. Requires an independently authorized local SEER export.",
+  "creators": [
+    {
+      "name": "dongjunbo82-collab"
+    }
+  ],
+  "license": "mit",
+  "version": "1.0.0",
+  "keywords": [
+    "SEER",
+    "ampullary adenocarcinoma",
+    "morphology coding",
+    "selection",
+    "competing risks",
+    "R"
+  ],
+  "access_right": "open",
+  "publication_date": "2026-10-15"
+}

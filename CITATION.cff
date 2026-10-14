@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the versioned code archive; this repository contains no study data or manuscript."
+title: "SEER ampullary morphology: statistical analysis code"
+type: software
+authors:
+  - name: "dongjunbo82-collab"
+version: 1.0.0
+date-released: 2026-10-15
+url: "https://github.com/dongjunbo82-collab/seer-ampullary-morphology-analysis"
+license: MIT

@@ -1,0 +1,8 @@
+args <- commandArgs(TRUE)
+stopifnot(length(args)==5)
+Sys.setenv(SEER_CODE_ROOT=args[1],SEER_INPUT=args[2],SEER_MODE=args[4])
+setwd(args[3])
+bootstrap_n <- function(n=1000L) if(Sys.getenv('SEER_MODE')=='smoke') 5L else as.integer(n)
+for(p in c('survival','cmprsk'))if(!requireNamespace(p,quietly=TRUE))stop('Missing package: ',p,'; install separately if authorized.')
+options(stringsAsFactors=FALSE)
+source(file.path(args[1],'R',args[5]),chdir=FALSE)
