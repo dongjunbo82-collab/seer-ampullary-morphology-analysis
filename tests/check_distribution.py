@@ -7,6 +7,7 @@ exts={'.R','.md','.py'}
 bad=[]
 patterns=[r'(?<![A-Za-z0-9])[A-Za-z]:[\\/]',r'(?i)C:[\\/]Users',r'(?i)gh[pousr]_[A-Za-z0-9]{15,}',
  r'(?i)(?:token|password|secret)\s*[:=]\s*[\'"][A-Za-z0-9_-]{16,}',
+ r'(?i)(?:access_token|api_key|client_secret)=[A-Za-z0-9_-]{10,}',
  r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}']
 for p in root.rglob('*'):
  if not p.is_file() or '.git' in p.parts:continue

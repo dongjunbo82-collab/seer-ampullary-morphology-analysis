@@ -13,3 +13,11 @@ er<-do.call(rbind,lapply(levels(era),function(e){z<-d[era==e,];data.frame(era=e,
 write.csv(er,file.path(out,'era_coverage.csv'),row.names=FALSE)
 flow<-data.frame(step=c('All malignant','Age/year/site eligible before survival exclusions','Valid survival and event','Detailed or NOS in modern era'),n=c(nrow(d),sum(d$year>=2010&d$year<=2022),sum(d$eligible&d$year>=2010),nrow(q)))
 write.csv(flow,file.path(out,'modern_flow.csv'),row.names=FALSE)
+categorical<-do.call(rbind,lapply(c('sex','race','stage','surgery'),function(v){
+ do.call(rbind,lapply(split(q,q$group),function(z){
+  tt<-table(z[[v]],useNA='ifany')
+  data.frame(group=unique(z$group),variable=v,level=names(tt),n=as.integer(tt),
+    percentage=100*as.integer(tt)/nrow(z))
+ }))
+}))
+write.csv(categorical,file.path(out,'modern_characteristics_categorical.csv'),row.names=FALSE)
