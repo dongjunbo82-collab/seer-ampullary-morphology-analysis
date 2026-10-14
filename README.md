@@ -116,6 +116,10 @@ are excluded. Git and citation metadata use the selected repository account only
 
 ## Citation and license
 
-Use the versioned GitHub release and the Zenodo DOI once it has been issued.
-No DOI is asserted before successful archival. Citation metadata are supplied in
-`CITATION.cff`. MIT applies to this code only; it grants no rights to SEER data.
+The immutable v1.0.0 code archive is available at
+[Zenodo DOI: 10.5281/zenodo.23374749](https://doi.org/10.5281/zenodo.23374749)
+and the [versioned GitHub release](https://github.com/dongjunbo82-collab/seer-ampullary-morphology-analysis/releases/tag/v1.0.0).
+The DOI was verified after successful archival. The archived 24-file code package
+matches the v1.0.0 Git tag byte-for-byte. The main branch subsequently adds citation
+links only; the tagged analysis code is unchanged. Citation metadata are supplied
+in `CITATION.cff`. MIT applies to this code only; it grants no rights to SEER data.
