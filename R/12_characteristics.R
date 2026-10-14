@@ -3,6 +3,7 @@ options(stringsAsFactors=FALSE)
 library(survival)
 d<-readRDS('descriptive/broad_derived_with_ids.rds')
 out<-'original_overlap'
+dir.create(out,recursive=TRUE,showWarnings=FALSE)
 q<-d[d$eligible&d$year>=2010&(d$typed3|d$nos),]
 q$group<-ifelse(q$typed3,'Detailed codes','NOS')
 tab<-do.call(rbind,lapply(split(q,q$group),function(z)data.frame(group=unique(z$group),n=nrow(z),patients=length(unique(z$id)),age_mean=mean(z$age),age_sd=sd(z$age),year_mean=mean(z$year),female=sum(z$sex=='Female'),localized=sum(z$stage=='Localized'),regional=sum(z$stage=='Regional'),distant=sum(z$stage=='Distant'),unknown_stage=sum(z$stage=='Unknown'),surgery=sum(z$surgery=='Yes'),no_surgery=sum(z$surgery=='No'),unknown_surgery=sum(z$surgery=='Unknown'))))

@@ -52,6 +52,18 @@ Module 1 must have already created the private derived RDS. Module 5 uses module
 4's estimator definitions; module 6 also loads those definitions without running
 module 4's analysis loop. Module 10 needs completed modules 6 and 8.
 
+After a full run, check the locally generated primary intervals and independent
+estimator checks (these tests read private outputs but do not publish them):
+
+```sh
+Rscript tests/check_results.R /private/analysis_results
+python tests/check_distribution.py
+```
+
+The Python check uses only the standard library and is optional for statistical
+execution; it audits the code distribution for prohibited files and sensitive
+patterns. It does not install anything.
+
 ## Modules and analysis coverage
 
 | Module | Role | Manuscript result mapping |
