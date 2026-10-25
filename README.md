@@ -31,4 +31,4 @@ SEER8 module 10 optionally generates diagnostic plots; the two scripts in figure
 Observed coding coverage and the surgery proportion within coding groups use different denominators. The primary standardized association averages predictions over the 2,535 complete-case reference records, not all 2,675 reference records, and is not a causal surgery effect. SEER 17 overlaps geographically with SEER 8. Registry labels are not pathology-validated. Exploratory survival models with different overlap weights target different populations; their contrast cannot isolate surgery adjustment, and wide intervals do not establish subtype equivalence. The confirmation sensitivity adds only 15 reference records and does not exclude broader diagnostic selection.
 
 ## Citation and license
-Use CITATION.cff and the version-specific Zenodo archive associated with the GitHub release. MIT license. SEER access and use remain subject to the applicable data-use agreement.
+Cite the [version 2.0.2 Zenodo archive](https://doi.org/10.5281/zenodo.23637804), DOI 10.5281/zenodo.23637804. See CITATION.cff. MIT license. SEER access and use remain subject to the applicable data-use agreement.
