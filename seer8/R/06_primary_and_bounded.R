@@ -7,7 +7,6 @@ d<-readRDS('descriptive/broad_derived_with_ids.rds')
 d$hist_num<-as.integer(substr(d[['Histologic Type ICD-O-3']],1,4))
 d$surg_num<-as.integer(d[['RX Summ--Surg Prim Site (1998-2022)']])
 stopifnot(all(d$typed3== (d$hist_num%in%c(8144,8163,8255)&d$current)))
-# Freeze scenario set and interpretation hierarchy before calculating new contrasts.
 sc<-data.frame(name=c('supported3_all','supported3_surgery','modern1_all','modern1_surgery','narrow3_all','narrow3_surgery','strict3_surgery','old3_surgery','recent_supported3_surgery'),
  start=c(rep(2010,8),2018),end=c(2019,2019,2022,2022,2019,2019,2019,2017,2019),
  surg=c(FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE),
@@ -15,7 +14,6 @@ sc<-data.frame(name=c('supported3_all','supported3_surgery','modern1_all','moder
  strict=c(rep(FALSE,6),TRUE,FALSE,FALSE),
  horizon=c(36,36,12,12,36,36,36,36,36),comparator='NOS',grade='none',complete=FALSE,ipcw=FALSE)
 write.csv(sc,file.path(out,'analysis_specification.csv'),row.names=FALSE)
-# Reuse tested estimator functions only; do not execute earlier output or bootstrap code.
 ss<-readLines(file.path(Sys.getenv('SEER_CODE_ROOT'),'R','04_grade_comparator_ipcw.R'))
 i<-grep('^aj<-',ss);j<-grep('^res<-diag<-draws',ss)
 eval(parse(text=ss[i:(j-1)]))

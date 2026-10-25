@@ -59,7 +59,6 @@ writeout(do.call(rbind,lapply(c('surgery','era','stage'),function(v)coverage(mod
 writeout(do.call(rbind,lapply(c('2010-2017','2018-2022'),function(e){z<-coverage(mod[mod$era==e,],'surgery');z$era<-e;z})),'modern_surgery_era_coverage')
 writeout(tab(mod,c('era','stage','surgery','typed3')),'modern_joint_support')
 writeout(data.frame(file=sourcefile,md5=unname(tools::md5sum(sourcefile))),'source_manifest')
-# Freeze the one additional model before fitting. No outcome model is added.
 spec <- data.frame(item=c('denominator','window','outcome','exclusions','covariates','standardization','uncertainty','interpretation'),
  value=c('All microscopically confirmed reference adenocarcinomas, including NOS and other variants','2010-2022',
  'Detailed codes 8144/8163/8255 versus all other reference codes','Unknown summary stage or unknown recorded surgery; retained in descriptive counts',

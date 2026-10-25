@@ -4,7 +4,6 @@ library(survival)
 set.seed(20261013)
 out<-'sensitivity';dir.create(out,recursive=TRUE,showWarnings=FALSE)
 d<-readRDS('descriptive/broad_derived_with_ids.rds')
-# Freeze additions before viewing their outcome contrasts; retain original primary analyses.
 # Separate era-specific grade sources, no cross-era grade concatenation.
 old<-d[['Grade Recode (thru 2017)']]
 d$grade_old<-factor(ifelse(grepl('^Well',old),'I',ifelse(grepl('^Moderately',old),'II',ifelse(grepl('^Poorly|^Undifferentiated',old),'III/IV','Unknown'))))

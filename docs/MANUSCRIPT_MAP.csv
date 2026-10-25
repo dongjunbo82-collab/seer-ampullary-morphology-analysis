@@ -1,0 +1,28 @@
+artifact,generator,source_outputs,scope
+Table 1,Code definition,docs/VARIABLES.md; seer8/docs/INPUT.md,Documented labels and code-era rules; not model estimates
+Table 2,analysis/analyses.R seer17,06_composition_all_reference.csv,Full reference; no survival restriction
+Table 3,analysis/analyses.R seer17; analysis/confirmation_sensitivity.R,08_adjusted_coding_probabilities.csv;20_confirmation_sensitivity.csv,Six scenarios; probabilities and paired differences
+Table S1,"SEER8 modules3,6",original_overlap/standardized_risks_bootstrap.csv;primary/risks.csv,Other windows; retain own targets
+Table S2A,SEER8 module8,coding_selection/histology_by_era.csv,Morphology-era counts
+Table S2B,SEER8 module1,descriptive/definition_counts.csv,SEER8 case-definition counts
+Table S3,SEER8 module8,coding_selection/audit_summary.csv;distant_2018plus_m_t_surgery.csv;distant_crosswalk_aggregate.csv,Stage and surgery audit
+Table S4,"SEER8 modules3,6",original_overlap/balance.csv;stratum_counts.csv;primary/diagnostics.csv,"Balance, support, bootstrap"
+Table S5,"SEER8 modules4,5",sensitivity/risks.csv;ipcw_reduced_risks.csv;diagnostics.csv,"Comparator, grade, censoring"
+Table S6,SEER8 module7,composition/gcomp_results.csv;gcomp_diagnostics.csv,"Hypothetical mixtures, not mediation"
+Table S7,SEER8 module7,composition/subcode_support_risks.csv;subcode_contrasts.csv,Unweighted unequal-era descriptive subtype risks
+Table S8,Reporting applications,STROBE/RECORD reporting recommendations,Editorial synthesis of STROBE/RECORD applications; no fitted model
+Table S9,SEER8 module6,primary/risks.csv;diagnostics.csv,Supported historical 3-year comparisons
+Table S10A,analysis/analyses.R SEER8 mode,seer8_standardized.csv;seer8_interaction.csv,Modern broad/narrow and stage omitted
+Table S10B,SEER8 module8,coding_selection/adjusted_coding_probabilities.csv;modern_observed_coverage.csv,SEER8 2010–2022 coding estimates
+Table S11,analysis/analyses.R SEER8 mode,seer8_procedure_composition.csv,Procedure codes and proportions
+Table S12,analysis/analyses.R SEER8 mode,seer8_annual_coverage.csv,Annual coverage by surgery
+Table S13A,analysis/analyses.R seer17,01_cohort_flow.csv;05_annual_histology.csv;04_observed_coverage.csv,Full reference cohort and annual counts
+Table S13B,analysis/analyses.R seer17,19_missingness_by_coding_group.csv,"Stage, surgery, survival eligibility"
+Table S14,analysis/analyses.R seer17;analysis/confirmation_sensitivity.R,08_adjusted_coding_probabilities.csv;20_confirmation_sensitivity.csv;21_confirmation_composition.csv,Six model scenarios
+Table S15,analysis/analyses.R seer17,02_subtype_followup_support.csv,Unweighted follow-up support
+Table S16,analysis/analyses.R seer17,11_overlap_weighted_risks.csv,Subtype scenarios; cancer and all-cause outcomes
+Table S17,analysis/analyses.R seer17,11_overlap_weighted_risks.csv,Detailed/NOS scenarios with differing overlap targets
+Table S18,analysis/analyses.R seer17,13_survival_support_ESS.csv;14_covariate_balance.csv;bootstrap_survival_*.csv,"Support, balance, warnings/failures"
+Table S19,"analysis/analyses.R SEER8 mode;SEER8 modules11,12",seer8_composition.csv;original_overlap/modern_characteristics.csv;followup_missing_audit.csv,Historical survival-eligible composition
+Figure 1,figures/figure1.R,04_observed_coverage.csv;06_composition_all_reference.csv;08_adjusted_coding_probabilities.csv;20_confirmation_sensitivity.csv,"600dpiTIFF, modern population"
+Figure 2,figures/figure2.R,Authorized raw exports;18_annual_surgery_coverage.csv,Flow counts and observed annual coverage

@@ -1,10 +1,8 @@
-# All data/results stay outside the repository; defense in depth only.
-*.csv
-*.tsv
-*.txt
 *.rds
 *.RData
 *.Rhistory
+*.txt
+*.tsv
 *.docx
 *.pdf
 *.png
