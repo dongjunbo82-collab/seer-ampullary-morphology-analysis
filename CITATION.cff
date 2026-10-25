@@ -4,7 +4,7 @@ title: "SEER ampullary morphology: statistical analysis code"
 type: software
 authors:
   - name: "dongjunbo82-collab"
-version: 2.0.0
+version: 2.0.1
 date-released: 2026-10-25
 url: "https://github.com/dongjunbo82-collab/seer-ampullary-morphology-analysis"
 license: MIT
